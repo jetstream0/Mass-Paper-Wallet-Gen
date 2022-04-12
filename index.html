@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Batch Paper Wallet Creation</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/libs/banano.js"></script>
+</head>
+
+<body>
+  <p>Returns a CSV file (Comma Separated Values) of the seeds. To not get ratelimited by the Kalium node, I recommend generating in batches. For example, if you need 1000 codes, do batches 20 of 50 or something.</p>
+  <b id="error" style="display:none;">Insufficient Funds</b>
+  <label for="seed">Seed of address that fills up paper wallets:</label>
+  <input id="seed" class="form-control" type="text" name="seed"/>
+  <br>
+  <label for="wallet-amount">Amount of paper wallets to generate:</label>
+  <input type="number" id="wallet-amount" name="wallet-amount" min="0" max="5000" value="0"/>
+  <br>
+  <label for="amount">Amount per account (in whole banano):</label>
+  <input type="input" id="amount-per" name="amount-per" placeholder="Eg: 0.42 or 19"/>
+  <br>
+  <input type="button" id="go" value="Go"/>
+  <br>
+  <p id="list"></p>
+  <script src="script.js"></script>
+</body>
+
+</html>
